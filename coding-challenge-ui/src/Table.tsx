@@ -41,8 +41,8 @@ export default function Table({columns, data,} : {columns:any, data:any}) {
                     <span>
                         {column.isSorted
                         ? column.isSortedDesc
-                            ? ' ⬆'
-                            : ' ⬇'
+                            ? ' ⬇'
+                            : ' ⬆'
                         : ''}
                     </span>
                     </th>
