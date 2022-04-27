@@ -13,11 +13,15 @@ class storeDict {
  * @param res 
  * @returns {<Array>}
  */
-export async function handleOrders(req: any, res: any) {
-    const orders = await getOrders();
-    const stores = await getStores();
-    const overdueData = generateOverdueData(orders, stores);
-    res.send(overdueData);
+export async function handleOrders(req: any, res: any) { 
+    try{
+        const orders = await getOrders();
+        const stores = await getStores();
+        const overdueData = generateOverdueData(orders, stores);
+        res.send(overdueData);
+    } catch (e) {
+        console.log(e);
+    }
 }
 
 /**
